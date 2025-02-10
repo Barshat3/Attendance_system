@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 # Set dataset path and image dimensions
-DATASET_PATH = '//home/barshat/Desktop/Attendence System/dataset/lfw-deepfunneled' 
+DATASET_PATH = '/home/barshat/Desktop/Attendence System/dataset' 
 IMG_SIZE = (160, 160)
 
 def load_images(dataset_path):

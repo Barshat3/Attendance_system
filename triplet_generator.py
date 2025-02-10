@@ -20,7 +20,7 @@ def generate_triplet(data):
 
     return anchor_img, positive_img, negative_img
 
-def generate_triplet_batch(data, batch_size=32):
+def generate_triplet_batch(data, batch_size=16):
     anchors, positives, negatives = [], [], []
 
     for _ in range(batch_size):

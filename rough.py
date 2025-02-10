@@ -1,1 +1,3 @@
-from facenet_pytorch import InceptionResnetV1
+import tensorflow as tf
+# print(tf.__version__)
+print("This is working")

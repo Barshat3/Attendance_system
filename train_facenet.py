@@ -4,9 +4,9 @@ from data_loader import load_images
 from triplet_generator import generate_triplet_batch
 
 # Set dataset path and training parameters
-DATASET_PATH = '/home/barshat/Desktop/Attendence System/dataset/lfw-deepfunneled' 
+DATASET_PATH = '/home/barshat/Desktop/Attendence System/dataset' 
 epochs = 10
-batch_size = 32
+batch_size = 16
 steps_per_epoch = 100
 embedding_dim = 128
 
@@ -41,4 +41,4 @@ for epoch in range(epochs):
         print(f"Step {step + 1}/{steps_per_epoch}, Loss: {loss.numpy()}")
 
 # Save the trained model
-facenet_model.save("models/facenet_inception_resnet.h5")
+facenet_model.save("/home/barshat/Desktop/Attendence System/models/facenet_inception_resnet.h5")

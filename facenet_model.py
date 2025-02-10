@@ -83,9 +83,8 @@ facenet_model = FaceNet_InceptionResNet()
 facenet_model.summary()
 
 def triplet_loss(y_true, y_pred, alpha=0.2):
-    anchor, positive, negative = y_pred[0], y_pred[1], y_pred[2]
+    anchor, positive, negative = y_pred  # Directly unpack y_pred as a list
     pos_dist = tf.reduce_sum(tf.square(anchor - positive), axis=-1)
     neg_dist = tf.reduce_sum(tf.square(anchor - negative), axis=-1)
     basic_loss = pos_dist - neg_dist + alpha
-    loss = tf.reduce_mean(tf.maximum(basic_loss, 0.0))
-    return loss
+    return tf.reduce_mean(tf.maximum(basic_loss, 0.0))
